@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Form for capturing user input -->
+    <form id="resume-form">
+        <h2>Create Your Resume</h2>
+
+        <label for="profile-pic">Profile Picture:</label>
+        <input type="file" id="profile-pic" name="profile-pic" accept="image/*" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="education">Education:</label>
+        <textarea id="education" name="education" required></textarea>
+
+        <label for="skills">Skills (comma separated):</label>
+        <textarea id="skills" name="skills" required></textarea>
+
+        <label for="experience">Work Experience:</label>
+        <textarea id="experience" name="experience" required></textarea>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <!-- Dynamic Resume Container -->
+    <div class="resume-container" id="resume-container">
+        <div class="personal-info">
+            <img id="display-profile-pic" alt="Profile Picture" class="profile-pic">
+            <h1 id="display-name">Your Name</h1>
+            <p id="display-email">Email: your-email@example.com</p>
+            <p id="display-phone">Phone: (123) 456-7890</p>
+        </div>
+
+        <div class="education">
+            <h2>Education</h2>
+            <p id="display-education">Your education details here.</p>
+        </div>
+
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul id="display-skills"></ul> <!-- Dynamically populate skills here -->
+        </div>
+
+        <div class="work-experience">
+            <h2>Work Experience</h2>
+            <p id="display-experience">Your work experience details here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
